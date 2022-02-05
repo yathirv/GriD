@@ -9,11 +9,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Test;
 
 public class remoTest {
 
-	public static void main(String[] args) throws MalformedURLException {
-
+	@Test
+	public void Check() throws MalformedURLException
+	{
 		//new RemoteWebDriver(new URL("http://localhost:4444/"), new ChromeOptions());
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setBrowserName("chrome");
