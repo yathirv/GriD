@@ -8,8 +8,8 @@ public class GlobalValuesDrive {
 	public static void main(String[] args) throws IOException {
 
 		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream(
-				("user.dir")+"\\src\\data.properties");
+		String path = System.getProperty("user.dir")+"\\data.properties";
+		FileInputStream fis = new FileInputStream(path);
 		prop.load(fis);
 
 		System.out.println(prop.getProperty("browser"));
@@ -18,8 +18,7 @@ public class GlobalValuesDrive {
 		prop.setProperty("browser", "firefox");
 		System.out.println(prop.getProperty("browser"));
 		
-		FileOutputStream fos = new FileOutputStream(
-				("user.dir")+"\\src\\data.properties");
+		FileOutputStream fos = new FileOutputStream(path);
 		prop.store(fos, null);
 
 	}
